@@ -40,7 +40,7 @@ function Schedule() {
         <DayDropdown selected={currentDay} changeDay={setCurrentDay} />
       </div>
 
-      <ul className='custom-scroll px-4 mt-4 lg:overflow-y-auto lg:max-h-[79dvh] lg:mb-4'>
+      <ul className='custom-scroll px-4 mt-4 not-lg:pb-4 lg:overflow-y-auto lg:max-h-[79dvh] lg:mb-4'>
         {hourList.map(({ temperature, formatDate, time, weatherCode }) => (
           <li
             key={`${temperature}-${formatDate}-${time}-${weatherCode}`}
