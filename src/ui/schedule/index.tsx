@@ -40,11 +40,11 @@ function Schedule() {
         <DayDropdown selected={currentDay} changeDay={setCurrentDay} />
       </div>
 
-      <ul className='custom-scroll px-4 mt-4 lg:overflow-y-auto lg:max-h-[81dvh]'>
+      <ul className='custom-scroll px-4 mt-4 lg:overflow-y-auto lg:max-h-[79dvh] lg:mb-4'>
         {hourList.map(({ temperature, formatDate, time, weatherCode }) => (
           <li
             key={`${temperature}-${formatDate}-${time}-${weatherCode}`}
-            className={`text-xl flex items-center my-4 p-4 first:mt-0 ${loading ? 'py-8' : ''} shadow-2xs bg-neutral-700 rounded-md border border-neutral-600`}
+            className={`text-xl flex items-center my-4 p-4 first:mt-0 last:mb-0 ${loading ? 'py-8' : ''} shadow-2xs bg-neutral-700 rounded-md border border-neutral-600`}
           >
             {!loading ? (
               <>
